@@ -3,8 +3,8 @@ class Shoe
   attr_reader :brand
 
 require 'pry' 
-  BRANDS = []
-  def initialize(brand = "Uggs")
+
+  def initialize(brand)
     @brand = brand
   end
 
@@ -13,7 +13,7 @@ require 'pry'
     puts "Your shoe is as good as new!"
   end
 
-  def brand=(brand)
+  def brand=(brand = "Uggs")
     @brand = brand 
     BRANDS << brand
   end 
