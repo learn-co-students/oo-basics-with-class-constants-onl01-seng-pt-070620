@@ -3,19 +3,18 @@ class Shoe
   attr_reader :brand
 
 require 'pry' 
-
+  BRANDS = []
+  
   def initialize(brand)
     @brand = brand
+    if !BRANDS.include?(brand) 
+      BRANDS << brand
+    end
   end
 
   def cobble
     self.condition = "new"
     puts "Your shoe is as good as new!"
   end
-
-  def brand=(brand = "Uggs")
-    @brand = brand 
-    BRANDS << brand
-  end 
  
 end
